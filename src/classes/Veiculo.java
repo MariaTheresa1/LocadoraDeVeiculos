@@ -1,22 +1,50 @@
 package classes;
 
-public interface Veiculo {
+public abstract class Veiculo {
 	
-	String getPlaca();
-	void setPlaca(String placa);
-	String getModelo();
-	void setModelo(String modelo);
-	Integer getAno();
-	void setAno(Integer ano);
-	String getCor();
-	void setCor(String cor);
-
-	public enum Tipo{
-		PEQUENO, MEDIO, SUV; // 100, 150, 200
+	private String placa;
+	private String modelo;
+	private Integer ano;
+	private String cor;
+	
+	public enum Tipo {
+		PEQUENO, MEDIO, SUV; // R$ 100, R$ 150, R$ 200
 	}
 	
-	void cadastrarVeiculo();
-	void alterarVeiculo();
-	void buscarVeiculo();
+	public Veiculo() {
+		
+	}
+	
+	public Veiculo(String placa, String modelo, Integer ano, String cor) {
+		this.placa = placa;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.cor = cor;
+	}
+	
+	public String getPlaca() {
+		return placa;
+	}
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public Integer getAno() {
+		return ano;
+	}
+	public void setAno(Integer ano) {
+		this.ano = ano;
+	}
+	public String getCor() {
+		return cor;
+	}
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
 
 }

@@ -1,6 +1,6 @@
 package classes;
 
-public class PessoaJuridica implements Cliente {
+public class PessoaJuridica extends Cliente {
 	
 	private String cnpj;
 	
@@ -22,75 +22,9 @@ public class PessoaJuridica implements Cliente {
 	}
 
 	@Override
-	public String getNome() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setNome(String nome) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getEndereco() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setEndereco(String endereco) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getTelefone() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setTelefone(String telefone) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getEmail() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setEmail(String email) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void cadastrarCliente() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void alterarCliente() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void alugarVeiculo() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void devolverVeiculo() {
-		// TODO Auto-generated method stub
-		
+	public String toString() {
+		return "Pessoa Jurídica [CNPJ=" + getCnpj() + ", Nome=" + getNome() + ", Endereço="
+				+ getEndereco() + ", Telefone=" + getTelefone() + ", E-mail=" + getEmail() + "]\n";
 	}
 	
 }
