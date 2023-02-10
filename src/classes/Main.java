@@ -156,6 +156,7 @@ public class Main {
 		Integer opcao;
 		
 		GestaoDeClientes gestaoDeClientes = new GestaoDeClientes();
+		GestaoDeVeiculos gestaoDeVeiculos = new GestaoDeVeiculos();
 		
 		do {			
 			opcao = exibirMenu();			
@@ -175,26 +176,28 @@ public class Main {
 					break;
 					
 				// 8- Cadastrar Carro
-				case 8:
+				case 8:					
+					gestaoDeVeiculos.veiculos.add(gestaoDeVeiculos.cadastrarCarro());
 					break;
 					
 				// 9- Cadastrar Moto
 				case 9:
+					gestaoDeVeiculos.veiculos.add(gestaoDeVeiculos.cadastrarMoto());
 					break;
 					
 				// 10- Cadastrar Caminhão
 				case 10:
+					gestaoDeVeiculos.veiculos.add(gestaoDeVeiculos.cadastrarCaminhao());
 					break;
+					
 				// 11- Cadastrar Pessoa Física
 				case 11:
-					PessoaFisica clientePF = gestaoDeClientes.cadastrarClientePessoaFisica();
-					gestaoDeClientes.clientes.add(clientePF);
+					gestaoDeClientes.clientes.add(gestaoDeClientes.cadastrarClientePessoaFisica());
 					break;
 					
 				// 12- Cadastrar Pessoa Jurídica
-				case 12:					
-					PessoaJuridica clientePJ = gestaoDeClientes.cadastrarClientePessoaJuridica();
-					gestaoDeClientes.clientes.add(clientePJ);
+				case 12:
+					gestaoDeClientes.clientes.add(gestaoDeClientes.cadastrarClientePessoaJuridica());
 					break;
 					
 				// 13- Alterar Pessoa Física
@@ -223,6 +226,8 @@ public class Main {
 			
 		} while (opcao != -1);
 		
-		System.out.println(gestaoDeClientes.clientes);
+		System.out.println("Clientes:\n" + gestaoDeClientes.clientes);
+		System.out.println("Veículos:\n" + gestaoDeVeiculos.veiculos);
+
 	}
 }

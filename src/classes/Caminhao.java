@@ -21,4 +21,10 @@ public class Caminhao extends Veiculo {
 		this.cargaMaxima = cargaMaxima;
 	}
 
+	@Override
+	public String toString() {
+		return "Caminhão [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano="
+				+ getAno() +", Cor=" + getCor() + ", Carga Máxima=" + getCargaMaxima() + "]\n";
+	}
+	
 }

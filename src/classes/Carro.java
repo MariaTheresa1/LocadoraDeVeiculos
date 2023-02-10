@@ -20,5 +20,11 @@ public class Carro extends Veiculo {
 	public void setQuantidadeDePortas(Integer quantidadeDePortas) {
 		this.quantidadeDePortas = quantidadeDePortas;
 	}
+
+	@Override
+	public String toString() {
+		return "Carro [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano=" + getAno() + 
+				", Cor=" + getCor() + ", Quantidade de portas=" + getQuantidadeDePortas() + "]\n";
+	}
 	
 }

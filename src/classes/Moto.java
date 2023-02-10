@@ -21,4 +21,10 @@ public class Moto extends Veiculo {
 		this.tipoDeCarenagem = tipoDeCarenagem;
 	}
 
+	@Override
+	public String toString() {
+		return "Moto [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano=" +	getAno() + 
+				", Cor=" + getCor() + ", Tipo de carenagem=" + getTipoDeCarenagem() + "]\n";
+	}
+	
 }
