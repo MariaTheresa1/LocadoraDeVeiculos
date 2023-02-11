@@ -120,12 +120,10 @@ public class GestaoDeClientes {
 					System.out.println("Opção inválida.");
 					break;
 				}
-
-			} else {
-				System.out.println("CPF de cliente não encontrado.");
-			}
+				return;
+			} 
 		}
-
+		System.out.println("CPF de cliente não encontrado.");
 	}
 	
 	void alterarClientePessoaJuridica(ArrayList<PessoaJuridica> clientes) {
@@ -184,12 +182,10 @@ public class GestaoDeClientes {
 					System.out.println("Opção inválida.");
 					break;
 				}
-
-			} else {
-				System.out.println("CNPJ de cliente não encontrado.");
+				return;
 			}
 		}
-
+		System.out.println("CNPJ de cliente não encontrado.");
 	}
 	
 	void alugarVeiculo() {

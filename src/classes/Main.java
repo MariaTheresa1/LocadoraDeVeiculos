@@ -165,6 +165,7 @@ public class Main {
 			
 				// 2- Alterar Veículo
 				case 2:
+					gestaoDeVeiculos.alterarVeiculo(gestaoDeVeiculos.veiculos);
 					break;
 					
 				// 3- Buscar Veículo
