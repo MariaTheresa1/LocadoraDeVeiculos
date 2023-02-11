@@ -79,7 +79,7 @@ public class GestaoDeVeiculos {
 		
 	}
 	
-	void buscarVeiculo() {
+	void buscarVeiculo(Integer placa) {
 		
 	}
 }

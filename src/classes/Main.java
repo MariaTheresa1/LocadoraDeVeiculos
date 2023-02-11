@@ -192,16 +192,17 @@ public class Main {
 					
 				// 11- Cadastrar Pessoa Física
 				case 11:
-					gestaoDeClientes.clientes.add(gestaoDeClientes.cadastrarClientePessoaFisica());
+					gestaoDeClientes.clientesPF.add(gestaoDeClientes.cadastrarClientePessoaFisica());
 					break;
 					
 				// 12- Cadastrar Pessoa Jurídica
 				case 12:
-					gestaoDeClientes.clientes.add(gestaoDeClientes.cadastrarClientePessoaJuridica());
+					gestaoDeClientes.clientesPJ.add(gestaoDeClientes.cadastrarClientePessoaJuridica());
 					break;
 					
 				// 13- Alterar Pessoa Física
 				case 13:
+					gestaoDeClientes.alterarClientePessoaFisica(gestaoDeClientes.clientesPF);
 					break;
 					
 				// 14- Alterar Pessoa Jurídica					
@@ -226,7 +227,9 @@ public class Main {
 			
 		} while (opcao != -1);
 		
-		System.out.println("Clientes:\n" + gestaoDeClientes.clientes);
+		System.out.println("Clientes Pessoa Física:\n" + gestaoDeClientes.clientesPF);
+		System.out.println("Clientes Pessoa Jurídica:\n" + gestaoDeClientes.clientesPJ);
+
 		System.out.println("Veículos:\n" + gestaoDeVeiculos.veiculos);
 
 	}
