@@ -207,6 +207,7 @@ public class Main {
 					
 				// 14- Alterar Pessoa Jurídica					
 				case 14:
+					gestaoDeClientes.alterarClientePessoaJuridica(gestaoDeClientes.clientesPJ);
 					break;
 					
 				// 15- Alugar Veículo para Pessoa Física

@@ -127,7 +127,71 @@ public class GestaoDeClientes {
 		}
 
 	}
+	
+	void alterarClientePessoaJuridica(ArrayList<PessoaJuridica> clientes) {
 
+		System.out.print("Informe o CNPJ do cliente a ser alterado: ");
+		String cnpj = scanner.next();
+		
+		for (PessoaJuridica cliente : clientes) {
+			if (cliente.getCnpj().equals(cnpj)) {
+
+				System.out.println("Qual campo você deseja alterar?");
+				System.out.println("1- CNPJ");
+				System.out.println("2- Nome");
+				System.out.println("3- Endereço");
+				System.out.println("4- Telefone");
+				System.out.println("5- Email");
+				System.out.println("0- Cancelar alteração");
+				System.out.print("Digite a opção: ");
+				Integer opcao = scanner.nextInt();
+
+				switch (opcao) {
+				case 1:
+					System.out.print("Informe o novo CNPJ: ");
+					cliente.setCnpj(scanner.next());
+					System.out.println("Dado alterado com sucesso.");
+					break;
+
+				case 2:
+					System.out.print("Informe o novo nome: ");
+					cliente.setNome(scanner.next());
+					System.out.println("Dado alterado com sucesso.");
+					break;
+
+				case 3:
+					System.out.print("Informe o novo endereço: ");
+					cliente.setEndereco(scanner.next());
+					System.out.println("Dado alterado com sucesso.");
+					break;
+
+				case 4:
+					System.out.print("Informe o novo telefone: ");
+					cliente.setTelefone(scanner.next());
+					System.out.println("Dado alterado com sucesso.");
+					break;
+
+				case 5:
+					System.out.print("Informe o novo e-mail: ");
+					cliente.setEmail(scanner.next());
+					System.out.println("Dado alterado com sucesso.");
+					break;
+					
+				case 0:
+					break;
+					
+				default:
+					System.out.println("Opção inválida.");
+					break;
+				}
+
+			} else {
+				System.out.println("CNPJ de cliente não encontrado.");
+			}
+		}
+
+	}
+	
 	void alugarVeiculo() {
 
 	}
