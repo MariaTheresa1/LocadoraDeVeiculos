@@ -165,10 +165,38 @@ public class GestaoDeVeiculos {
 				return;
 			} 			
 		}
-		System.out.print("Número da placa não encontrado.");
+		System.out.println("Número da placa não encontrado.");
 	}
 	
-	void buscarVeiculo(Integer placa) {
+	void buscarVeiculo(ArrayList<Veiculo> veiculos) {
+		System.out.print("Informe a placa do veículo que deseja buscar: ");
+		String placa = scanner.next();
 		
+		for(Veiculo veiculo: veiculos) {
+			if(veiculo.getPlaca().equals(placa)) {
+				
+				System.out.println("Veículo encontrado.");
+				
+				if (veiculo instanceof Carro) {		
+					
+					Carro carro = (Carro)veiculo;
+					System.out.println(carro);
+					
+				} else {
+					if (veiculo instanceof Moto) {	
+						
+						Moto moto = (Moto)veiculo;
+						System.out.println(moto);
+						
+					} else { // Caminhão			
+						
+						Caminhao caminhao = (Caminhao)veiculo;
+						System.out.println(caminhao);				
+					}
+				}				
+				return;
+			}
+		}
+		System.out.println("Número da placa não encontrado.");
 	}
 }

@@ -170,6 +170,7 @@ public class Main {
 					
 				// 3- Buscar Veículo
 				case 3:
+					gestaoDeVeiculos.buscarVeiculo(gestaoDeVeiculos.veiculos);
 					break;
 				
 				// 7- Devolver Veículo
