@@ -3,16 +3,20 @@ package classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import classes.Veiculo.Tipo;
+
 public class GestaoDeVeiculos {
 
 	ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
 	
 	Scanner scanner = new Scanner(System.in);
+	Integer tipo;
+	Tipo tipoDeVeiculo;
 	
 	Carro cadastrarCarro() {
 		
 		Carro veiculo = new Carro();
-		
+
 		System.out.print("Informe a placa: ");
 		veiculo.setPlaca(scanner.next());
 		
@@ -24,6 +28,34 @@ public class GestaoDeVeiculos {
 		
 		System.out.print("Informe a cor: ");
 		veiculo.setCor(scanner.next());
+		
+		do {
+			System.out.print("Informe o tipo: ");
+			System.out.println("1- Pequeno");
+			System.out.println("2- Médio");
+			System.out.println("3- SUV");
+			tipo = scanner.nextInt();
+			
+			switch (tipo) {
+			case 1: {
+				tipoDeVeiculo = Tipo.PEQUENO;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			case 2: {
+				tipoDeVeiculo = Tipo.MEDIO;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			case 3: {
+				tipoDeVeiculo = Tipo.SUV;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			default:
+				System.out.println("Opção inválida, tente novamente.");
+			}
+		} while (tipo <= 0 || tipo > 3);
 		
 		System.out.print("Quantidade de portas: ");
 		veiculo.setAno(scanner.nextInt());
@@ -47,6 +79,34 @@ public class GestaoDeVeiculos {
 		System.out.print("Informe a cor: ");
 		veiculo.setCor(scanner.next());
 		
+		do {
+			System.out.print("Informe o tipo: ");
+			System.out.println("1- Pequeno");
+			System.out.println("2- Médio");
+			System.out.println("3- SUV");
+			tipo = scanner.nextInt();
+			
+			switch (tipo) {
+			case 1: {
+				tipoDeVeiculo = Tipo.PEQUENO;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			case 2: {
+				tipoDeVeiculo = Tipo.MEDIO;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			case 3: {
+				tipoDeVeiculo = Tipo.SUV;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			default:
+				System.out.println("Opção inválida, tente novamente.");
+			}
+		} while (tipo <= 0 || tipo > 3);
+		
 		System.out.print("Informe o tipo de carenagem: ");
 		veiculo.setTipoDeCarenagem(scanner.next());
 		
@@ -68,6 +128,34 @@ public class GestaoDeVeiculos {
 		
 		System.out.print("Informe a cor: ");
 		veiculo.setCor(scanner.next());
+		
+		do {
+			System.out.print("Informe o tipo: ");
+			System.out.println("1- Pequeno");
+			System.out.println("2- Médio");
+			System.out.println("3- SUV");
+			tipo = scanner.nextInt();
+			
+			switch (tipo) {
+			case 1: {
+				tipoDeVeiculo = Tipo.PEQUENO;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			case 2: {
+				tipoDeVeiculo = Tipo.MEDIO;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			case 3: {
+				tipoDeVeiculo = Tipo.SUV;
+				veiculo.setTipo(tipoDeVeiculo);
+				break;
+			}
+			default:
+				System.out.println("Opção inválida, tente novamente.");
+			}
+		} while (tipo <= 0 || tipo > 3);
 		
 		System.out.print("Informe a carga máxima suportada: ");
 		veiculo.setCargaMaxima(scanner.nextFloat());

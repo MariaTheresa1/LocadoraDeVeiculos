@@ -2,15 +2,16 @@ package classes;
 
 public abstract class Veiculo {
 	
+	public enum Tipo {
+		PEQUENO, MEDIO, SUV; // R$ 100, R$ 150, R$ 200
+	}
+	
 	private String placa;
 	private String modelo;
 	private Integer ano;
 	private String cor;
 	private Boolean alugado;
-	
-	public enum Tipo {
-		PEQUENO, MEDIO, SUV; // R$ 100, R$ 150, R$ 200
-	}
+	private Tipo tipo;
 	
 	public Veiculo() {
 		
@@ -53,5 +54,11 @@ public abstract class Veiculo {
 	}
 	public void setAlugado(Boolean alugado) {
 		this.alugado = alugado;
+	}
+	public Tipo getTipo() {
+		return tipo;
+	}
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
 	}
 }

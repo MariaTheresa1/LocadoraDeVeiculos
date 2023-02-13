@@ -86,12 +86,12 @@ public class GestaoDeAlugueis {
 			String local = scanner.next();
 			
 	        LocalDateTime dataHoraAtual = LocalDateTime.now();
-			
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+
 			alugueis.add(new Aluguel(local, dataHoraAtual, veiculos.get(indiceVeiculo), (Cliente)clientesPF.get(indiceCliente)));
 			
 			System.out.println("Veículo alugado com sucesso.");
 			System.out.println("Local: " + local);
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 			System.out.println("Data e horário: " + dataHoraAtual.format(formatter));
 			System.out.println(clientesPF.get(indiceCliente));
 			System.out.println(veiculos.get(indiceVeiculo));
@@ -118,7 +118,7 @@ public class GestaoDeAlugueis {
 			        Duration duracao = Duration.between(dataAluguel, dataHoraAtual);
 			        long diferencaEmDias = duracao.toDays();
 			        
-			        
+			        // ...
 			        
 			        return;
 				} else {
