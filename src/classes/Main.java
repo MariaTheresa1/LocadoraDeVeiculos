@@ -160,6 +160,7 @@ public class Main {
 					
 				// 7- Devolver Veículo
 				case 7:
+					gestaoDeAlugueis.devolverVeiculo(gestaoDeAlugueis.alugueis);
 					break;
 					
 				// 8- Cadastrar Carro

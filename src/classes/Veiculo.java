@@ -2,16 +2,22 @@ package classes;
 
 public abstract class Veiculo {
 	
-	public enum Tipo {
-		PEQUENO, MEDIO, SUV; // R$ 100, R$ 150, R$ 200
-	}
-	
 	private String placa;
 	private String modelo;
 	private Integer ano;
 	private String cor;
 	private Boolean alugado;
 	private Tipo tipo;
+	
+	public enum Tipo {
+		PEQUENO(100f), MEDIO(150f), SUV(200f); // R$ 100, R$ 150, R$ 200
+		
+		public Float valorTipo;
+		
+		Tipo(Float valor) {
+			valorTipo = valor;
+		}
+	}
 	
 	public Veiculo() {
 		

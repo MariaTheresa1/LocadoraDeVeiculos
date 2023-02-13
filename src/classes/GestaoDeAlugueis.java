@@ -106,6 +106,7 @@ public class GestaoDeAlugueis {
 		
 		System.out.println("Informe a placa do veículo:");
 		String placa = scanner.next();
+		Float divida;
 		
 		for(int i = 0; i < alugueis.size(); i++) {
 			if (alugueis.get(i).getVeiculo().getPlaca().equals(placa)) {
@@ -117,8 +118,35 @@ public class GestaoDeAlugueis {
 			        Duration duracao = Duration.between(dataAluguel, dataHoraAtual);
 			        long diferencaEmDias = duracao.toDays();
 			        
-			        // ...
+			        divida = diferencaEmDias * alugueis.get(i).getVeiculo().getTipo().valorTipo;
+			      
+			        // Regras de desconto
+			        if(alugueis.get(i).getCliente() instanceof PessoaFisica && diferencaEmDias > 5) {
+			        	
+			        	divida -= divida * 0.05f; 
+			        	
+			        } else {			        	
+			        	if (alugueis.get(i).getCliente() instanceof PessoaJuridica && diferencaEmDias > 3) {
+			        		
+				        	divida -= divida * 0.1f; 
+
+			        	}
+			        }
 			        
+			        alugueis.get(i).getCliente().setSaldoDevedor(alugueis.get(i).getCliente().getSaldoDevedor() + divida);
+			        alugueis.get(i).getVeiculo().setAlugado(false);
+
+			        System.out.println("Veículo devolvido com sucesso.");
+			        System.out.println("Placa do veículo: " +  alugueis.get(i).getVeiculo().getPlaca());
+			        if(alugueis.get(i).getCliente() instanceof PessoaFisica) {
+			        	PessoaFisica pessoaFisica = (PessoaFisica)alugueis.get(i).getCliente();
+			        	System.out.println("CPF do Cliente: " + pessoaFisica.getCpf());
+			        	} else {
+				        	PessoaJuridica pessoaJuridica = (PessoaJuridica)alugueis.get(i).getCliente();
+				        	System.out.println("CNPJ do Cliente: " + pessoaJuridica.getCnpj());
+			        	}
+			        System.out.println("Saldo devedor: " + alugueis.get(i).getCliente().getSaldoDevedor());
+
 			        return;
 				} else {
 					System.out.println("Este veículo não está alugado.");
