@@ -61,4 +61,17 @@ public abstract class Veiculo {
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}
+
+	@Override
+	public String toString() {
+		String alugado;
+		if(getAlugado() == true) {
+			alugado = "Sim";
+		} else {
+			alugado = "Não";
+		}
+		return "Veículo [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano=" + getAno()
+				+ ", Cor=" + getCor() + ", Alugado=" + alugado + ", Tipo=" + getTipo() + "]";
+	}
+	
 }
