@@ -155,7 +155,7 @@ public class Main {
 				
 				// 7- Alugar Veículo
 				case 6:
-					gestaoDeAlugueis.alugarVeiculo(gestaoDeClientes.clientesPF, gestaoDeClientes.clientesPJ, gestaoDeVeiculos.veiculos);
+					gestaoDeAlugueis.alugarVeiculo(gestaoDeClientes.clientesPF, gestaoDeClientes.clientesPJ, gestaoDeVeiculos.veiculos, gestaoDeAlugueis.alugueis);
 					break;
 					
 				// 7- Devolver Veículo

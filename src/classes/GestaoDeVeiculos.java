@@ -30,7 +30,7 @@ public class GestaoDeVeiculos {
 		veiculo.setCor(scanner.next());
 		
 		do {
-			System.out.print("Informe o tipo: ");
+			System.out.print("Informe o tipo:\n");
 			System.out.println("1- Pequeno");
 			System.out.println("2- Médio");
 			System.out.println("3- SUV");
@@ -58,7 +58,7 @@ public class GestaoDeVeiculos {
 		} while (tipo <= 0 || tipo > 3);
 		
 		System.out.print("Quantidade de portas: ");
-		veiculo.setAno(scanner.nextInt());
+		veiculo.setQuantidadeDePortas(scanner.nextInt());
 		
 		return veiculo;
 	}
@@ -80,7 +80,7 @@ public class GestaoDeVeiculos {
 		veiculo.setCor(scanner.next());
 		
 		do {
-			System.out.print("Informe o tipo: ");
+			System.out.print("Informe o tipo:\n");
 			System.out.println("1- Pequeno");
 			System.out.println("2- Médio");
 			System.out.println("3- SUV");
@@ -130,7 +130,7 @@ public class GestaoDeVeiculos {
 		veiculo.setCor(scanner.next());
 		
 		do {
-			System.out.print("Informe o tipo: ");
+			System.out.print("Informe o tipo:\n");
 			System.out.println("1- Pequeno");
 			System.out.println("2- Médio");
 			System.out.println("3- SUV");

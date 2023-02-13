@@ -23,8 +23,15 @@ public class Moto extends Veiculo {
 
 	@Override
 	public String toString() {
-		return "Moto [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano=" +	getAno() + 
-				", Cor=" + getCor() + ", Tipo de carenagem=" + getTipoDeCarenagem() + "]\n";
+		String alugado;
+		if(getAlugado() == true) {
+			alugado = "Sim";
+		} else {
+			alugado = "Não";
+		}
+		return "Moto [Placa=" + getPlaca() + ", Modelo=" + getModelo() +
+				", Ano=" +	getAno() + ", Cor=" + getCor() + ", Alugado=" +
+				alugado + ", Tipo de carenagem=" + getTipoDeCarenagem() + "]\n";
 	}
 	
 }

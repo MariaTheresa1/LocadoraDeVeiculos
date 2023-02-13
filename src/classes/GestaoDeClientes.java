@@ -32,6 +32,8 @@ public class GestaoDeClientes {
 		System.out.print("Informe o e-mail: ");
 		cliente.setEmail(scanner.next());
 
+		cliente.setSaldoDevedor(0f);
+		
 		return cliente;
 	}
 
@@ -53,6 +55,8 @@ public class GestaoDeClientes {
 
 		System.out.print("Informe o e-mail: ");
 		cliente.setEmail(scanner.next());
+
+		cliente.setSaldoDevedor(0f);
 
 		return cliente;
 	}

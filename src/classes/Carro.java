@@ -23,8 +23,15 @@ public class Carro extends Veiculo {
 
 	@Override
 	public String toString() {
-		return "Carro [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano=" + getAno() + 
-				", Cor=" + getCor() + ", Quantidade de portas=" + getQuantidadeDePortas() + "]\n";
+		String alugado;
+		if(getAlugado() == true) {
+			alugado = "Sim";
+		} else {
+			alugado = "Não";
+		}
+		return "Carro [Placa=" + getPlaca() + ", Modelo=" + getModelo() +
+				", Ano=" + getAno() + ", Cor=" + getCor() + ", Alugado=" +
+				alugado + ", Quantidade de portas=" + getQuantidadeDePortas() + "]\n";
 	}
 	
 }

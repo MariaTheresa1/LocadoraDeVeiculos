@@ -23,8 +23,15 @@ public class Caminhao extends Veiculo {
 
 	@Override
 	public String toString() {
-		return "Caminhão [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano="
-				+ getAno() +", Cor=" + getCor() + ", Carga Máxima=" + getCargaMaxima() + "]\n";
+		String alugado;
+		if(getAlugado() == true) {
+			alugado = "Sim";
+		} else {
+			alugado = "Não";
+		}
+		return "Caminhão [Placa=" + getPlaca() + ", Modelo=" + getModelo() +
+				", Ano=" + getAno() + ", Cor=" + getCor() + ", Alugado=" + 
+				alugado + ", Carga Máxima=" + getCargaMaxima() + "]\n";
 	}
 	
 }
