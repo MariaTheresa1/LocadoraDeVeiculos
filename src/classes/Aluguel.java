@@ -1,10 +1,11 @@
 package classes;
 
+import java.time.LocalDateTime;
+
 public class Aluguel {
 	
 	private String local;
-	private String data;
-	private String horario;
+	private LocalDateTime data;
 	private Veiculo veiculo;
 	private Cliente cliente;
 	
@@ -12,10 +13,9 @@ public class Aluguel {
 		
 	}
 	
-	public Aluguel(String local, String data, String horario, Veiculo veiculo, Cliente cliente) {
+	public Aluguel(String local, LocalDateTime data, Veiculo veiculo, Cliente cliente) {
 		this.local = local;
 		this.data = data;
-		this.horario = horario;
 		this.veiculo = veiculo;
 		this.cliente = cliente;
 	}
@@ -26,17 +26,11 @@ public class Aluguel {
 	public void setLocal(String local) {
 		this.local = local;
 	}
-	public String getData() {
+	public LocalDateTime getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(LocalDateTime data) {
 		this.data = data;
-	}
-	public String getHorario() {
-		return horario;
-	}
-	public void setHorario(String horario) {
-		this.horario = horario;
 	}
 	public Veiculo getVeiculo() {
 		return veiculo;
@@ -49,6 +43,12 @@ public class Aluguel {
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+
+	@Override
+	public String toString() {
+		return "Aluguel [Veículo=" + getVeiculo() + ", Cliente=" + getCliente() +
+				"Local=" + getLocal() + ", Data=" + getData() + "]";
 	}
 	
 }

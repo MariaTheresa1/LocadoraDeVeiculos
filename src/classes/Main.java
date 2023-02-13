@@ -7,7 +7,7 @@ public class Main {
 	public static Integer exibirMenu() {
 		
 		Scanner scanner = new Scanner(System.in);
-
+		
 		System.out.println("****** MENU ******\n");
 
 		System.out.println("----- VEÍCULOS -----");
@@ -111,28 +111,7 @@ public class Main {
 				
 				return opcao;
 				
-			case 6:
-				do {
-					System.out.println("----- ALUGUEL -----");
-					System.out.println("15- Alugar Veículo para Pessoa Física");
-					System.out.println("16- Alugar Veículo para Pessoa Jurídica");
-					System.out.println("0- Voltar\n");
-					opcao = scanner.nextInt();	
-					
-					switch(opcao) {
-						case 15:
-							return opcao;				
-						case 16:
-							return opcao;				
-						case 0:
-							break;
-						default:
-							System.out.println("Opção inválida.\n");
-							break;
-					}
-					
-				} while (opcao != 0);				
-				
+			case 6:					
 				return opcao;
 				
 			case 7:
@@ -157,6 +136,7 @@ public class Main {
 		
 		GestaoDeClientes gestaoDeClientes = new GestaoDeClientes();
 		GestaoDeVeiculos gestaoDeVeiculos = new GestaoDeVeiculos();
+		GestaoDeAlugueis gestaoDeAlugueis = new GestaoDeAlugueis();
 		
 		do {			
 			opcao = exibirMenu();			
@@ -173,6 +153,11 @@ public class Main {
 					gestaoDeVeiculos.buscarVeiculo(gestaoDeVeiculos.veiculos);
 					break;
 				
+				// 7- Alugar Veículo
+				case 6:
+					gestaoDeAlugueis.alugarVeiculo(gestaoDeClientes.clientesPF, gestaoDeClientes.clientesPJ, gestaoDeVeiculos.veiculos);
+					break;
+					
 				// 7- Devolver Veículo
 				case 7:
 					break;
@@ -212,14 +197,6 @@ public class Main {
 					gestaoDeClientes.alterarClientePessoaJuridica(gestaoDeClientes.clientesPJ);
 					break;
 					
-				// 15- Alugar Veículo para Pessoa Física
-				case 15:
-					break;
-					
-				// 16- Alugar Veículo para Pessoa Jurídica
-				case 16:
-					break;					
-				
 				case -1:
 					break;					
 				

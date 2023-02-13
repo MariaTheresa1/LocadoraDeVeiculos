@@ -187,13 +187,5 @@ public class GestaoDeClientes {
 		}
 		System.out.println("CNPJ de cliente não encontrado.");
 	}
-	
-	void alugarVeiculo() {
-
-	}
-
-	void devolverVeiculo() {
-
-	}
 
 }

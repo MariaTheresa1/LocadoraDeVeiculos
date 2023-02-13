@@ -6,6 +6,7 @@ public abstract class Veiculo {
 	private String modelo;
 	private Integer ano;
 	private String cor;
+	private Boolean alugado;
 	
 	public enum Tipo {
 		PEQUENO, MEDIO, SUV; // R$ 100, R$ 150, R$ 200
@@ -20,6 +21,7 @@ public abstract class Veiculo {
 		this.modelo = modelo;
 		this.ano = ano;
 		this.cor = cor;
+		this.alugado = false;
 	}
 	
 	public String getPlaca() {
@@ -46,5 +48,10 @@ public abstract class Veiculo {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
-
+	public Boolean getAlugado() {
+		return alugado;
+	}
+	public void setAlugado(Boolean alugado) {
+		this.alugado = alugado;
+	}
 }
