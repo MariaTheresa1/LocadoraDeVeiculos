@@ -154,6 +154,7 @@ public class GestaoDeVeiculos {
 			}
 			default:
 				System.out.println("Opção inválida, tente novamente.");
+				break;
 			}
 		} while (tipo <= 0 || tipo > 3);
 		
@@ -176,14 +177,15 @@ public class GestaoDeVeiculos {
 				System.out.println("2- Modelo");
 				System.out.println("3- Ano");
 				System.out.println("4- Cor");
-				
+				System.out.println("5- Tipo");
+
 				if (veiculo instanceof Carro) {
-					System.out.println("5- Quantidade de portas");
+					System.out.println("6- Quantidade de portas");
 				} else {
 					if (veiculo instanceof Moto) {
-						System.out.println("5- Tipo de carenagem");
+						System.out.println("6- Tipo de carenagem");
 					} else { // Caminhão
-						System.out.println("5- Capacidade máxima de carga");
+						System.out.println("6- Capacidade máxima de carga");
 					}
 				}
 				
@@ -215,8 +217,43 @@ public class GestaoDeVeiculos {
 					veiculo.setCor(scanner.next());
 					System.out.println("Dado alterado com sucesso.");
 					break;
+					
+				case 5:
+					do {
+						System.out.print("Informe o tipo: ");
+						System.out.println("1- Pequeno");
+						System.out.println("2- Médio");
+						System.out.println("3- SUV");
+						tipo = scanner.nextInt();
+						
+						switch (tipo) {
+						case 1: {
+							tipoDeVeiculo = Tipo.PEQUENO;
+							veiculo.setTipo(tipoDeVeiculo);
+							System.out.println("Dado alterado com sucesso.");
+							break;
+						}
+						case 2: {
+							tipoDeVeiculo = Tipo.MEDIO;
+							veiculo.setTipo(tipoDeVeiculo);
+							System.out.println("Dado alterado com sucesso.");
+							break;
+						}
+						case 3: {
+							tipoDeVeiculo = Tipo.SUV;
+							veiculo.setTipo(tipoDeVeiculo);
+							System.out.println("Dado alterado com sucesso.");
+							break;
+						}
+						default:
+							System.out.println("Opção inválida, tente novamente.");
+							break;
+						}
+					} while (tipo <= 0 || tipo > 3);					
+
+					break;
 				
-				case 5:					
+				case 6:					
 					if (veiculo instanceof Carro) {
 						Carro carro = (Carro)veiculo;
 
