@@ -35,7 +35,7 @@ public class PessoaFisica extends Cliente{
 	public String toString() {
 		return "Pessoa Física [CPF=" + getCpf() + ", Data de nascimento=" + getDataDeNascimento()
 				+ ", Nome=" + getNome() + ", Endereço=" + getEndereco() + ", Telefone=" + getTelefone()
-				+ ", E-mail=" + getEmail() + "]\n";
+				+ ", E-mail=" + getEmail() + ", Saldo devedor=" + getSaldoDevedor() + "]\n";
 	}
 	
 }

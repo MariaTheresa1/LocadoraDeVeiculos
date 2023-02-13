@@ -71,7 +71,7 @@ public abstract class Veiculo {
 			alugado = "Não";
 		}
 		return "Veículo [Placa=" + getPlaca() + ", Modelo=" + getModelo() + ", Ano=" + getAno()
-				+ ", Cor=" + getCor() + ", Alugado=" + alugado + ", Tipo=" + getTipo() + "]";
+				+ ", Cor=" + getCor() + ", Alugado=" + alugado + ", Tipo=" + getTipo() + "]\n";
 	}
 	
 }

@@ -24,7 +24,8 @@ public class PessoaJuridica extends Cliente {
 	@Override
 	public String toString() {
 		return "Pessoa Jurídica [CNPJ=" + getCnpj() + ", Nome=" + getNome() + ", Endereço="
-				+ getEndereco() + ", Telefone=" + getTelefone() + ", E-mail=" + getEmail() + "]\n";
+				+ getEndereco() + ", Telefone=" + getTelefone() + ", E-mail="
+				+ getEmail() + ", Saldo devedor=" + getSaldoDevedor() + "]\n";
 	}
 	
 }

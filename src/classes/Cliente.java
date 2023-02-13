@@ -6,6 +6,7 @@ public abstract class Cliente {
 	private String endereco;
 	private String telefone;
 	private String email;
+	private Float saldoDevedor;
 	
 	public Cliente() {
 		
@@ -16,6 +17,7 @@ public abstract class Cliente {
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.email = email;
+		this.saldoDevedor = 0f;
 	}
 	
 	public String getNome() {
@@ -48,6 +50,14 @@ public abstract class Cliente {
 	
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Float getSaldoDevedor() {
+		return saldoDevedor;
+	}
+
+	public void setSaldoDevedor(Float saldoDevedor) {
+		this.saldoDevedor = saldoDevedor;
 	}
 	
 }
