@@ -3,6 +3,10 @@ package classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/* A classe Gestão de Clientes é responsável por cadastrar e
+ * alterar clientes (Pessoa Física e Pessoa Jurídica).
+ */
+
 public class GestaoDeClientes {
 
 	ArrayList<PessoaFisica> clientesPF = new ArrayList<PessoaFisica>();

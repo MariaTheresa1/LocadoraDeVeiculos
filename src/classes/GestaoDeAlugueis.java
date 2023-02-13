@@ -5,6 +5,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/* A classe Gestão de Aluguéis é responsável por alugar e
+ * devolver veículos.
+ */
+
 public class GestaoDeAlugueis {
 
 	ArrayList<Aluguel> alugueis = new ArrayList<Aluguel>();

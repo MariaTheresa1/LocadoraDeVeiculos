@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 import classes.Veiculo.Tipo;
 
+/* A classe Gestão de Veículos é responsável por cadastrar, 
+ * alterar e buscar veículos (Carro, Moto e Caminhão).
+ */
+
 public class GestaoDeVeiculos {
 
 	ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
