@@ -212,6 +212,8 @@ public class Main {
 		System.out.println("Clientes Pessoa Jurídica:\n" + gestaoDeClientes.clientesPJ);
 
 		System.out.println("Veículos:\n" + gestaoDeVeiculos.veiculos);
+		
+		System.out.println("Aluguéis:\n" + gestaoDeAlugueis.alugueis);
 
 	}
 }

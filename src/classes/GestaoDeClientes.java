@@ -34,6 +34,9 @@ public class GestaoDeClientes {
 
 		cliente.setSaldoDevedor(0f);
 		
+		System.out.println("Cliente cadastrado com sucesso.");
+		System.out.println(cliente);
+
 		return cliente;
 	}
 
@@ -57,6 +60,9 @@ public class GestaoDeClientes {
 		cliente.setEmail(scanner.next());
 
 		cliente.setSaldoDevedor(0f);
+
+		System.out.println("Cliente cadastrado com sucesso.");
+		System.out.println(cliente);
 
 		return cliente;
 	}

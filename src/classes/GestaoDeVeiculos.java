@@ -60,6 +60,11 @@ public class GestaoDeVeiculos {
 		System.out.print("Quantidade de portas: ");
 		veiculo.setQuantidadeDePortas(scanner.nextInt());
 		
+		veiculo.setAlugado(false);
+		
+		System.out.println("Veículo cadastrado com sucesso.");
+		System.out.println(veiculo);
+
 		return veiculo;
 	}
 	
@@ -109,6 +114,11 @@ public class GestaoDeVeiculos {
 		
 		System.out.print("Informe o tipo de carenagem: ");
 		veiculo.setTipoDeCarenagem(scanner.next());
+		
+		veiculo.setAlugado(false);
+
+		System.out.println("Veículo cadastrado com sucesso.");
+		System.out.println(veiculo);
 		
 		return veiculo;
 	}
@@ -160,6 +170,11 @@ public class GestaoDeVeiculos {
 		
 		System.out.print("Informe a carga máxima suportada: ");
 		veiculo.setCargaMaxima(scanner.nextFloat());
+		
+		veiculo.setAlugado(false);
+
+		System.out.println("Veículo cadastrado com sucesso.");
+		System.out.println(veiculo);
 		
 		return veiculo;
 	}

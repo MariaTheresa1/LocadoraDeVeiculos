@@ -2,7 +2,6 @@ package classes;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -78,14 +77,14 @@ public class GestaoDeAlugueis {
 			System.out.print("Informe a placa do veículo: ");
 			String placa = scanner.next();
 			for (Integer i = 0; i < veiculos.size(); i++) {
-				if (veiculos.get(i).getPlaca().equals(placa)) {
+				if (veiculos.get(i).getPlaca().equals(placa) && veiculos.get(i).getAlugado() == false) {
 					indiceVeiculo = i;
 					opcao = 0;
-					break;
+					break;									
 				}
 			}
 			if (indiceVeiculo == -1) {
-				System.out.println("Placa de veículo não encontrada.");
+				System.out.println("Placa de veículo não encontrada ou veículo já alugado.");
 				System.out.println("Tentar novamente?\n1- Sim\n0- Não");
 				System.out.print("Escolha a opção: ");
 				opcao = scanner.nextInt();
@@ -112,7 +111,7 @@ public class GestaoDeAlugueis {
 
 	void devolverVeiculo(ArrayList<Aluguel> alugueis) {
 
-		System.out.println("Informe a placa do veículo:");
+		System.out.print("Informe a placa do veículo: ");
 		String placa = scanner.next();
 		Float divida;
 

@@ -1,6 +1,7 @@
 package classes;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Aluguel {
 	
@@ -8,11 +9,7 @@ public class Aluguel {
 	private LocalDateTime data;
 	private Veiculo veiculo;
 	private Cliente cliente;
-	
-	public Aluguel() {
-		
-	}
-	
+
 	public Aluguel(String local, LocalDateTime data, Veiculo veiculo, Cliente cliente) {
 		this.local = local;
 		this.data = data;
@@ -47,8 +44,9 @@ public class Aluguel {
 
 	@Override
 	public String toString() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		return "Aluguel [Veículo=" + getVeiculo() + ", Cliente=" + getCliente() +
-				"Local=" + getLocal() + ", Data=" + getData() + "]";
+				"Local=" + getLocal() + ", Data=" + getData().format(formatter) + "]\n";
 	}
 	
 }
